@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: nirmaan-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nirmaan
+      POSTGRES_PASSWORD: nirmaan
+      POSTGRES_DB: nirmaan
+    ports:
+      - "5432:5432"
+    volumes:
+      - nirmaan_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nirmaan -d nirmaan"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: .
+    container_name: nirmaan-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PORT: 4000
+      HOST: 0.0.0.0
+      NODE_ENV: production
+      LOG_LEVEL: info
+      DATABASE_URL: postgres://nirmaan:nirmaan@postgres:5432/nirmaan
+      MQTT_URL: ${MQTT_URL:-mqtt://mqtt.samay15jan.com:1883}
+      MQTT_USERNAME: ${MQTT_USERNAME:-}
+      MQTT_PASSWORD: ${MQTT_PASSWORD:-}
+      MQTT_CLIENT_ID: ${MQTT_CLIENT_ID:-nirmaan-backend}
+      MQTT_TOPIC_PREFIX: ${MQTT_TOPIC_PREFIX:-nirmaan}
+      MQTT_ENABLED: ${MQTT_ENABLED:-true}
+      NODE_OFFLINE_AFTER_SECONDS: ${NODE_OFFLINE_AFTER_SECONDS:-180}
+    ports:
+      - "4000:4000"
+    command: sh -c "node scripts/migrate.js && node src/server.js"
+
+volumes:
+  nirmaan_pgdata:

@@ -1,0 +1,12 @@
+{
+  "node_id": "NODE-004",
+  "gateway_id": "GW-002",
+  "timestamp": "2026-09-17T10:32:00Z",
+  "event_type": "sensor_failure",
+  "severity": "warning",
+  "message": "Ultrasonic sensor returned no echo",
+  "details": {
+    "sensor": "ultrasonic",
+    "consecutive_failures": 12
+  }
+}

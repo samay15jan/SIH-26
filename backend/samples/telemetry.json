@@ -1,0 +1,51 @@
+{
+  "node_id": "NODE-001",
+  "gateway_id": "GW-001",
+  "timestamp": "2026-09-17T10:30:00Z",
+  "sequence_number": 1001,
+  "sensors": {
+    "accel_x": 0.12,
+    "accel_y": 0.04,
+    "accel_z": 9.81,
+    "gyro_x": 0.01,
+    "gyro_y": 0.04,
+    "gyro_z": 0.02,
+    "roll": 1.2,
+    "pitch": 0.8,
+    "relative_yaw": 0.4,
+    "vibration_detected": false,
+    "vibration_count": 0,
+    "vibration_duration_ms": 0,
+    "potentiometer_raw": 1820,
+    "potentiometer_voltage": 1.4663,
+    "relative_displacement_mm": 4.7,
+    "crack_sensor_raw": 0,
+    "crack_sensor_voltage": 0.0,
+    "crack_detected": false,
+    "ultrasonic_distance_mm": 2495.3,
+    "ultrasonic_echo_time_us": 14549,
+    "reference_distance_mm": 2500.0,
+    "servo_target_angle": 45,
+    "servo_state": "idle"
+  },
+  "device": {
+    "firmware_version": "1.4.2",
+    "uptime_s": 86400,
+    "reset_reason": "POWERON",
+    "battery_voltage": 3.92,
+    "supply_voltage": 5.02,
+    "sensor_status": {
+      "imu": "ok",
+      "vibration": "ok",
+      "ultrasonic": "ok",
+      "crack": "ok",
+      "servo": "ok"
+    }
+  },
+  "comm": {
+    "lora_rssi": -92,
+    "lora_snr": 7.5,
+    "packets_lost": 0,
+    "packet_loss_percent": 0.0
+  }
+}

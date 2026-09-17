@@ -1,16 +1,5 @@
 import { useEffect, useRef } from "react";
 
-/**
- * JhanjharMap
- * Drop this component into an existing React/Vite project.
- *
- * Usage:
- *   <JhanjharMap apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY} />
- *
- * The map is intentionally focused on the Jharia/Jhanjhar demonstration area.
- * Adjust JHANJHAR_CENTER and DEFAULT_ZOOM if you have the exact mine coordinates.
- */
-
 const JHANJHAR_CENTER = {
   lat: 23.7407,
   lng: 86.4147,

@@ -1,0 +1,12 @@
+{
+  "node_id": "NODE-003",
+  "gateway_id": "GW-002",
+  "timestamp": "2026-09-17T10:31:02Z",
+  "event_type": "crack_detected",
+  "severity": "critical",
+  "message": "Crack sensor circuit broken",
+  "details": {
+    "crack_sensor_raw": 2100,
+    "consecutive_readings": 3
+  }
+}

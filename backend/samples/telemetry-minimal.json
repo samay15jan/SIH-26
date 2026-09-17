@@ -1,0 +1,12 @@
+{
+  "node_id": "NODE-002",
+  "gateway_id": "GW-001",
+  "timestamp": "2026-09-17T10:30:05Z",
+  "sequence_number": 2042,
+  "sensors": {
+    "accel_z": 9.79,
+    "vibration_detected": true,
+    "relative_displacement_mm": 2.1,
+    "battery_voltage": 3.88
+  }
+}

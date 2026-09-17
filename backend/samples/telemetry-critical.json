@@ -1,0 +1,32 @@
+{
+  "node_id": "NODE-003",
+  "gateway_id": "GW-002",
+  "timestamp": "2026-09-17T10:31:00Z",
+  "sequence_number": 3055,
+  "sensors": {
+    "accel_x": 0.9,
+    "accel_y": 0.7,
+    "accel_z": 11.4,
+    "roll": 12.6,
+    "pitch": 9.1,
+    "vibration_detected": true,
+    "vibration_count": 7,
+    "vibration_duration_ms": 1850,
+    "potentiometer_raw": 2410,
+    "relative_displacement_mm": 34.8,
+    "crack_sensor_raw": 2100,
+    "crack_sensor_voltage": 1.69,
+    "crack_detected": true,
+    "ultrasonic_distance_mm": 3168.4,
+    "reference_distance_mm": 3200.0
+  },
+  "device": {
+    "firmware_version": "1.4.2",
+    "battery_voltage": 3.18,
+    "uptime_s": 420
+  },
+  "comm": {
+    "lora_rssi": -118,
+    "lora_snr": 2.1
+  }
+}
